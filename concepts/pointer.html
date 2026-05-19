@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포인터 - C언어 기본 개념</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span class="brand-mark">C</span><span>Daedong C Note</span></a>
+      <a class="text-link" href="../concepts.html">목차</a>
+    </header>
+    <main class="page-shell">
+      <section class="lesson-hero">
+        <p class="eyebrow">Lesson 10</p>
+        <h1>포인터</h1>
+        <p>포인터는 값 자체가 아니라 값이 저장된 메모리 주소를 저장하는 변수입니다.</p>
+        <nav class="lesson-nav"><a class="text-link" href="function.html">이전 개념</a><a class="text-link" href="../concepts.html">목차로</a></nav>
+      </section>
+      <section class="lesson-content">
+        <article class="note-block">
+          <h2>핵심 설명</h2>
+          <p>변수 앞에 <code>&amp;</code>를 붙이면 그 변수의 주소를 얻을 수 있습니다. 포인터 변수는 이 주소를 저장합니다.</p>
+          <p>포인터 앞에 <code>*</code>를 붙이면 포인터가 가리키는 위치의 값을 읽거나 바꿀 수 있습니다. 이것을 간접 참조라고 합니다.</p>
+        </article>
+        <article class="note-block">
+          <h2>기억할 점</h2>
+          <ul>
+            <li><code>&amp;num</code>은 <code>num</code>의 주소입니다.</li>
+            <li><code>int *p</code>는 정수형 변수를 가리킬 수 있는 포인터입니다.</li>
+            <li><code>*p</code>는 p가 가리키는 위치의 실제 값입니다.</li>
+          </ul>
+        </article>
+        <article class="note-block">
+          <h2>예제 코드</h2>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int num = 10;
+    int *p = &amp;num;
+
+    printf("num의 값: %d\n", num);
+    printf("num의 주소: %p\n", (void *)&amp;num);
+    printf("p가 가리키는 값: %d\n", *p);
+
+    *p = 20;
+    printf("변경된 num의 값: %d\n", num);
+    return 0;
+}</code></pre>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

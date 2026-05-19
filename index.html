@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daedong C Language Note</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="페이지 상단">
+      <a class="brand" href="#top" aria-label="Daedong C Note 홈">
+        <span class="brand-mark">C</span>
+        <span>Daedong C Note</span>
+      </a>
+      <button class="share-button" id="shareButton" type="button" aria-label="페이지 공유">
+        <span aria-hidden="true">↗</span>
+        공유
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="project-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Daedong High School</p>
+          <h1 id="project-title">C Language Note</h1>
+          <p class="project-summary">
+            대동고 학생들에게 C언어를 알려주기 위해 수업 자료 링크와 기본 개념을
+            한곳에 정리한 페이지입니다.
+          </p>
+          <dl class="project-meta" aria-label="프로젝트 정보">
+            <div>
+              <dt>Class</dt>
+              <dd>대동고 C언어</dd>
+            </div>
+            <div>
+              <dt>Updated</dt>
+              <dd>2026.05.19</dd>
+            </div>
+            <div>
+              <dt>Materials</dt>
+              <dd id="linkCount">0</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="note-sheet sheet-main">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="note-sheet sheet-side">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="link-node node-a"></div>
+          <div class="link-node node-b"></div>
+          <div class="link-node node-c"></div>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="링크 필터">
+        <div class="section-heading">
+          <h2>수업 자료 링크</h2>
+          <p>노션 정리본과 구글 드라이브 자료를 바로 확인할 수 있습니다.</p>
+        </div>
+        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="카테고리"></div>
+      </section>
+
+      <section class="link-grid" id="linkGrid" aria-live="polite"></section>
+
+      <section class="concept-section" aria-labelledby="concept-title">
+        <div class="section-heading">
+          <p class="eyebrow">C Basics</p>
+          <h2 id="concept-title">기본 개념 정리</h2>
+          <p>목차 페이지에서 개념을 고르고, 각 개념별 상세 설명과 예제 코드를 확인할 수 있습니다.</p>
+        </div>
+        <a class="concept-entry" href="concepts.html">
+          <span class="concept-entry-mark" aria-hidden="true">01</span>
+          <span>
+            <strong>C언어 기본 개념 목차</strong>
+            <small>입출력부터 포인터까지 단계별 상세 노트 보기</small>
+          </span>
+          <span class="entry-arrow" aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>대동고 C언어 수업 자료</p>
+      <p>마지막 업데이트: 2026.05.19</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

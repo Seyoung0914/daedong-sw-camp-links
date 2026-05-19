@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열 - C언어 기본 개념</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span class="brand-mark">C</span><span>Daedong C Note</span></a>
+      <a class="text-link" href="../concepts.html">목차</a>
+    </header>
+    <main class="page-shell">
+      <section class="lesson-hero">
+        <p class="eyebrow">Lesson 07</p>
+        <h1>배열</h1>
+        <p>배열은 같은 자료형의 여러 값을 하나의 이름으로 묶어 번호를 붙여 관리하는 문법입니다.</p>
+        <nav class="lesson-nav"><a class="text-link" href="loop.html">이전 개념</a><a class="text-link" href="string.html">다음 개념</a></nav>
+      </section>
+      <section class="lesson-content">
+        <article class="note-block">
+          <h2>핵심 설명</h2>
+          <p>배열을 만들 때는 자료형, 배열 이름, 크기를 적습니다. 예를 들어 <code>int scores[5];</code>는 정수 5개를 저장할 수 있는 배열입니다.</p>
+          <p>배열의 번호는 0부터 시작합니다. 크기가 5인 배열의 인덱스는 <code>0</code>부터 <code>4</code>까지입니다.</p>
+        </article>
+        <article class="note-block">
+          <h2>기억할 점</h2>
+          <ul>
+            <li>배열 범위를 벗어난 인덱스에 접근하면 예상하기 어려운 문제가 생깁니다.</li>
+            <li>반복문을 사용하면 배열의 값을 차례대로 처리하기 쉽습니다.</li>
+            <li>배열 이름은 배열의 시작 주소처럼 동작하는 경우가 많습니다.</li>
+          </ul>
+        </article>
+        <article class="note-block">
+          <h2>예제 코드</h2>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int scores[5];
+    int sum = 0;
+
+    for (int i = 0; i &lt; 5; i++) {
+        printf("%d번째 점수: ", i + 1);
+        scanf("%d", &amp;scores[i]);
+        sum += scores[i];
+    }
+
+    printf("총점: %d\n", sum);
+    printf("평균: %.1f\n", sum / 5.0);
+    return 0;
+}</code></pre>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

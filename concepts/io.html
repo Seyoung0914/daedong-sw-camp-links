@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기본 입출력 - C언어 기본 개념</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span class="brand-mark">C</span><span>Daedong C Note</span></a>
+      <a class="text-link" href="../concepts.html">목차</a>
+    </header>
+    <main class="page-shell">
+      <section class="lesson-hero">
+        <p class="eyebrow">Lesson 01</p>
+        <h1>기본 입출력</h1>
+        <p>프로그램이 결과를 보여주고, 사용자의 값을 받아오는 가장 기본적인 방법입니다.</p>
+        <nav class="lesson-nav"><a class="text-link" href="../concepts.html">목차로 돌아가기</a><a class="text-link" href="types.html">다음 개념</a></nav>
+      </section>
+      <section class="lesson-content">
+        <article class="note-block">
+          <h2>C언어를 비유로 이해하기</h2>
+          <p>C언어 프로그램은 쉽게 말하면 컴퓨터에게 주는 요리 레시피입니다. 사람에게는 “냄비에 물을 넣고, 라면을 넣고, 4분 끓여”라고 말할 수 있지만, 컴퓨터에게는 정해진 문법으로 정확하게 명령해야 합니다.</p>
+          <p>예를 들어 <code>printf("Hello");</code>는 컴퓨터에게 “화면에 Hello라고 보여줘”라고 말하는 코드입니다. C언어는 컴퓨터가 알아듣는 방식으로 명령을 적는 언어라고 보면 됩니다.</p>
+        </article>
+        <article class="note-block">
+          <h2>printf는 뭐야?</h2>
+          <p><code>printf</code>는 컴퓨터 화면에 글자를 보여주는 명령입니다. 비유하면 스피커나 전광판 같은 역할을 합니다.</p>
+          <pre><code>printf("안녕하세요");</code></pre>
+          <p>이 코드는 컴퓨터에게 “화면에 ‘안녕하세요’라고 보여줘”라고 말하는 것입니다. 실행하면 화면에는 <code>안녕하세요</code>가 표시됩니다.</p>
+        </article>
+        <article class="note-block">
+          <h2>큰따옴표는 왜 써?</h2>
+          <p><code>"Hello"</code>처럼 큰따옴표 안에 있는 내용은 글자 그대로 출력할 문장입니다. 큰따옴표는 택배 상자처럼 생각하면 됩니다. <code>Hello</code>라는 글자를 상자에 담아서 컴퓨터에게 전달하는 것입니다.</p>
+          <p>큰따옴표 없이 쓰면 컴퓨터는 이것이 출력할 글자인지, 변수 이름인지 헷갈릴 수 있습니다.</p>
+        </article>
+        <article class="note-block">
+          <h2>\n은 줄바꿈</h2>
+          <p><code>\n</code>은 엔터 키라고 생각하면 됩니다. 즉, <code>printf("안녕\n");</code>은 “안녕을 출력하고 엔터를 쳐줘”라는 뜻입니다.</p>
+          <pre><code>printf("안녕\n");
+printf("반가워\n");</code></pre>
+          <p>실행 결과는 두 줄로 출력됩니다.</p>
+          <pre><code>안녕
+반가워</code></pre>
+        </article>
+        <article class="note-block">
+          <h2>기억할 점</h2>
+          <ul>
+            <li><code>\n</code>은 줄바꿈을 의미합니다.</li>
+            <li>정수는 <code>%d</code>, 실수는 <code>%lf</code>, 문자는 <code>%c</code>를 자주 사용합니다.</li>
+            <li><code>scanf</code>에서 변수 앞의 <code>&</code>를 빼먹지 않도록 주의합니다.</li>
+          </ul>
+        </article>
+        <article class="note-block">
+          <h2>예제 코드</h2>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Hello\n");
+    printf("안녕하세요\n");
+    printf("반가워요\n");
+
+    return 0;
+}</code></pre>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
